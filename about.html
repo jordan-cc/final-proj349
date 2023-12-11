@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scroll~</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="menubutton">&#9776; Menu</div>
+        <h1><a href="index.html">Scroll~</a></h1>
+    </header>
+<section>
+    <div class="post2">
+        <div class="vote-buttons">
+            <button onclick="upvote(1)">&#9650;</button>
+            <p id="counter-1">0</p>
+            <button onclick="downvote(1)">&#9660;</button>
+        </div>
+    <div>
+        <h2><a href="about.html">About</a></h2>    
+        <p>this post will explain more about me, click on the title title to proceed.</p>
+      <a href="Images/dogg2.jpg"><img src="Images/dogg2.jpg" alt="dogsampleimage2"></a>
+      <li>Img Source: https://someinterestingfacts.net/do-dogs-have-feelings/</li>
+    </div>
+</div>
+<section>
+    <div class="reply">
+        <div class="vote-buttons">
+            <button onclick="upvote(0)">&#9650;</button>
+            <p id="counter-0">0</p>
+            <button onclick="downvote(0)">&#9660;</button>
+        </div>
+        <div>
+            <h3>User</h3>
+            <p>This is a reply post also available with the functional upvote and downvote button!</p>
+        </div>
+    </div>
+
+</section>
+<script>
+
+    let counter = [0, 0];
+
+    function upvote(index) {
+    counter[index]++;
+    updateCounter(index);
+}
+
+    function downvote(index) {
+    counter[index]--;
+    updateCounter(index);
+}
+
+    function updateCounter(index) {
+    document.getElementById(`counter-${index}`).textContent = counter[index];
+}
+    </script>
+</body>
+</html>
